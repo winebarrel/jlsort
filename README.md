@@ -19,28 +19,28 @@ Options:
 ```
 % cat users.ndjson
 {"id":10,"name":"Carol"}
-{"id":22,"name":"Alice"}
+{"id":2,"name":"Alice"}
 {"id":13,"name":"Bob"}
 
 % jlsort -k id users.ndjson
 {"id":10,"name":"Carol"}
 {"id":13,"name":"Bob"}
-{"id":22,"name":"Alice"}
+{"id":2,"name":"Alice"}
 
 % jlsort -k name users.ndjson
-{"id":22,"name":"Alice"}
+{"id":2,"name":"Alice"}
 {"id":13,"name":"Bob"}
 {"id":10,"name":"Carol"}
 
 % jlsort -k id -n users.ndjson
+{"id":2,"name":"Alice"}
 {"id":10,"name":"Carol"}
 {"id":13,"name":"Bob"}
-{"id":22,"name":"Alice"}
 
 % jlsort -k name -r users.ndjson
 {"id":10,"name":"Carol"}
 {"id":13,"name":"Bob"}
-{"id":22,"name":"Alice"}
+{"id":2,"name":"Alice"}
 ```
 
 ## Related Links
