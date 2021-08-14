@@ -1,5 +1,4 @@
 mod cli;
-use ex_merge_sort;
 use serde_json::json;
 use serde_json::Value;
 
