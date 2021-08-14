@@ -1,3 +1,5 @@
 /target
 *.ndjson
 *.jsonl
+*.gz
+*.gz.sha1sum
