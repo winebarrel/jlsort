@@ -39,7 +39,6 @@ fn main() {
         if num {
             let a = a.as_f64().unwrap_or(f64::INFINITY);
             let b = b.as_f64().unwrap_or(f64::INFINITY);
-
             a.partial_cmp(&b).unwrap()
         } else {
             let a = a.to_string();
