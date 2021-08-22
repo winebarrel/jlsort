@@ -35,6 +35,9 @@ Options:
 
 ```
 # salaries.ndjson: from https://github.com/datacharmer/test_db
+% ls -lah salaries.ndjson
+-rw-r--r--  1 sugawara  staff   219M  8 15 00:02 salaries.ndjson
+
 % wc salaries.ndjson
  2844047 2844047 229607343 salaries.ndjson
 
