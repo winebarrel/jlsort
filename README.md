@@ -55,6 +55,17 @@ Options:
 
 % time -f "Time:%E, Memory:%M KB" jlsort -k to_date salaries.ndjson > /dev/null
 Time:0:28.01, Memory:86324 KB
+
+% cat salaries.ndjson salaries.ndjson > 2xsalaries.ndjson
+% cat 2xsalaries.ndjson 2xsalaries.ndjson > 4xsalaries.ndjson
+% cat 4xsalaries.ndjson 4xsalaries.ndjson > 8xsalaries.ndjson
+% cat 8xsalaries.ndjson 8xsalaries.ndjson > 16xsalaries.ndjson
+
+% ls -lah 16xsalaries.ndjson
+-rw-r--r--  1 sugawara  staff   3.4G  8 22 16:07 16xsalaries.ndjson
+
+% gtime -f "Time:%E, Memory:%M KB" cargo run --release -- -k to_date 16xsalaries.ndjson > /dev/null
+Time:12:05.33, Memory:114444 KB
 ```
 
 ## Related Links
