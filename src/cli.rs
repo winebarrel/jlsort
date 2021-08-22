@@ -9,8 +9,6 @@ pub(super) struct Options {
     pub file: String,
     pub key: String,
     pub capacity: u64,
-    pub numeric: bool,
-    pub reverse: bool,
 }
 
 fn print_usage(program: &str, opts: getopts::Options) {
@@ -30,8 +28,6 @@ pub(super) fn parse_opts() -> Options {
         &format!("chunk capacity (default: {})", DEFAULT_CAPACITY),
         "SIZE",
     );
-    opts.optflag("n", "numeric-sort", "sort fields numerically");
-    opts.optflag("r", "reverse", "sort in reverse order");
     opts.optflag("v", "version", "print version and exit");
     opts.optflag("h", "help", "print usage and exit");
 
@@ -55,9 +51,6 @@ pub(super) fn parse_opts() -> Options {
         .opt_get_default("c", DEFAULT_CAPACITY)
         .unwrap_or_else(|e| panic!("invalid capacity size: {}", e));
 
-    let num = matches.opt_present("n");
-    let rev = matches.opt_present("r");
-
     let file = match matches.free.len() {
         1 => matches.free[0].to_string(),
         _ => {
@@ -70,7 +63,5 @@ pub(super) fn parse_opts() -> Options {
         file: file,
         key: key,
         capacity: cap,
-        numeric: num,
-        reverse: rev,
     }
 }
