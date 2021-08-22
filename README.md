@@ -69,6 +69,9 @@ Time:12:05.33, Memory:114444 KB
 
 % time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c $((1024 * 1024 * 100)) 16xsalaries.ndjson > /dev/null
 Time:8:53.62, Memory:239324 KB
+
+% time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c $((1024 * 1024 * 1000)) 16xsalaries.ndjson > /dev/null
+Time:4:47.05, Memory:2087236 KB
 ```
 
 ## Related Links
