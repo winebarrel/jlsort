@@ -35,6 +35,18 @@ Options:
 
 ```
 # salaries.ndjson: from https://github.com/datacharmer/test_db
+% head salaries.ndjson
+{"emp_no":10001,"salary":60117,"from_date":"1986-06-26","to_date":"1987-06-26"}
+{"emp_no":10001,"salary":62102,"from_date":"1987-06-26","to_date":"1988-06-25"}
+{"emp_no":10001,"salary":66074,"from_date":"1988-06-25","to_date":"1989-06-25"}
+{"emp_no":10001,"salary":66596,"from_date":"1989-06-25","to_date":"1990-06-25"}
+{"emp_no":10001,"salary":66961,"from_date":"1990-06-25","to_date":"1991-06-25"}
+{"emp_no":10001,"salary":71046,"from_date":"1991-06-25","to_date":"1992-06-24"}
+{"emp_no":10001,"salary":74333,"from_date":"1992-06-24","to_date":"1993-06-24"}
+{"emp_no":10001,"salary":75286,"from_date":"1993-06-24","to_date":"1994-06-24"}
+{"emp_no":10001,"salary":75994,"from_date":"1994-06-24","to_date":"1995-06-24"}
+{"emp_no":10001,"salary":76884,"from_date":"1995-06-24","to_date":"1996-06-23"}
+
 % ls -lah salaries.ndjson
 -rw-r--r--  1 sugawara  staff   219M  8 15 00:02 salaries.ndjson
 
