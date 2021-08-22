@@ -55,6 +55,7 @@ Options:
 
 % time -f "Time:%E, Memory:%M KB" jlsort -k to_date salaries.ndjson > /dev/null
 Time:0:28.01, Memory:86324 KB
+# cf. https://www.gnu.org/software/time/
 
 % cat salaries.ndjson salaries.ndjson > 2xsalaries.ndjson
 % cat 2xsalaries.ndjson 2xsalaries.ndjson > 4xsalaries.ndjson
@@ -72,6 +73,9 @@ Time:8:53.62, Memory:239324 KB
 
 % time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c $((1024 * 1024 * 1000)) 16xsalaries.ndjson > /dev/null
 Time:4:47.05, Memory:2087236 KB
+
+% time -f "Time:%E, Memory:%M KB" -k to_date -c $((1024 * 1024 * 4000)) 16xsalaries.ndjson > /dev/null
+Time:2:42.51, Memory:7729932 KB
 ```
 
 ## Related Links
