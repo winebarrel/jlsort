@@ -64,8 +64,11 @@ Time:0:28.01, Memory:86324 KB
 % ls -lah 16xsalaries.ndjson
 -rw-r--r--  1 sugawara  staff   3.4G  8 22 16:07 16xsalaries.ndjson
 
-% gtime -f "Time:%E, Memory:%M KB" cargo run --release -- -k to_date 16xsalaries.ndjson > /dev/null
+% time -f "Time:%E, Memory:%M KB" jlsort -k to_date 16xsalaries.ndjson > /dev/null
 Time:12:05.33, Memory:114444 KB
+
+% time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c $((1024 * 1024 * 100)) 16xsalaries.ndjson > /dev/null
+Time:8:53.62, Memory:239324 KB
 ```
 
 ## Related Links
