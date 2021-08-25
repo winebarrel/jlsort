@@ -9,7 +9,7 @@ Usage: jlsort [OPTIONS] FILE
 
 Options:
     -k, --key KEY       JSON key to sort
-    -c, --capacity SIZE chunk capacity (default: 10485760)
+    -c, --capacity SIZE chunk capacity (default: 10M)
     -n, --numeric-sort  sort fields numerically
     -v, --version       print version and exit
     -h, --help          print usage and exit
@@ -74,13 +74,13 @@ Time:0:28.01, Memory:86324 KB
 % time -f "Time:%E, Memory:%M KB" jlsort -k to_date 16xsalaries.ndjson > /dev/null
 Time:12:05.33, Memory:114444 KB
 
-% time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c $((1024 * 1024 * 100)) 16xsalaries.ndjson > /dev/null
+% time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c 100m 16xsalaries.ndjson > /dev/null
 Time:8:53.62, Memory:239324 KB
 
-% time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c $((1024 * 1024 * 1000)) 16xsalaries.ndjson > /dev/null
+% time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c 1g 16xsalaries.ndjson > /dev/null
 Time:4:47.05, Memory:2087236 KB
 
-% time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c $((1024 * 1024 * 4000)) 16xsalaries.ndjson > /dev/null
+% time -f "Time:%E, Memory:%M KB" jlsort -k to_date -c 4g 16xsalaries.ndjson > /dev/null
 Time:2:42.51, Memory:7729932 KB
 ```
 
