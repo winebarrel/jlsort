@@ -1,6 +1,6 @@
 [package]
 name = "jlsort"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["winebarrel <sugawara@winebarrel.jp>"]
 edition = "2018"
 
