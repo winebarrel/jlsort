@@ -11,6 +11,7 @@ Options:
     -k, --key KEY       JSON key to sort
     -c, --capacity SIZE chunk capacity (default: 10M)
     -n, --numeric-sort  sort fields numerically
+    -r, --reverse       sort in reverse order
     -v, --version       print version and exit
     -h, --help          print usage and exit
 ```
@@ -35,6 +36,11 @@ Options:
 {"id":2,"name":"Alice"}
 {"id":10,"name":"Carol"}
 {"id":13,"name":"Bob"}
+
+% jlsort -k name -r users.ndjson
+{"id":10,"name":"Carol"}
+{"id":13,"name":"Bob"}
+{"id":22,"name":"Alice"}
 ```
 
 ## Benchmark

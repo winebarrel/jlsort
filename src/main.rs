@@ -24,14 +24,22 @@ fn main() {
     let key = opts.key;
 
     if opts.numeric {
-        ex_merge_sort_by_key::sort_by_key(f, io::stdout(), opts.capacity, |l| {
-            json_value_from_str(l, &key).as_i64().unwrap_or(i64::MAX)
-        })
+        ex_merge_sort_by_key::sort_by_key_with_order(
+            f,
+            io::stdout(),
+            opts.capacity,
+            opts.reverse,
+            |l| json_value_from_str(l, &key).as_i64().unwrap_or(i64::MAX),
+        )
         .unwrap();
     } else {
-        ex_merge_sort_by_key::sort_by_key(f, io::stdout(), opts.capacity, |l| {
-            json_value_from_str(l, &key).to_string()
-        })
+        ex_merge_sort_by_key::sort_by_key_with_order(
+            f,
+            io::stdout(),
+            opts.capacity,
+            opts.reverse,
+            |l| json_value_from_str(l, &key).to_string(),
+        )
         .unwrap();
     }
 }

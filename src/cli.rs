@@ -14,6 +14,7 @@ pub(super) struct Options {
     pub key: String,
     pub capacity: u64,
     pub numeric: bool,
+    pub reverse: bool,
 }
 
 fn print_usage(program: &str, opts: getopts::Options) {
@@ -34,6 +35,7 @@ pub(super) fn parse_opts() -> Options {
         "SIZE",
     );
     opts.optflag("n", "numeric-sort", "sort fields numerically");
+    opts.optflag("r", "reverse", "sort in reverse order");
     opts.optflag("v", "version", "print version and exit");
     opts.optflag("h", "help", "print usage and exit");
 
@@ -76,6 +78,7 @@ pub(super) fn parse_opts() -> Options {
     };
 
     let num = matches.opt_present("n");
+    let rev = matches.opt_present("r");
 
     let file = match matches.free.len() {
         1 => matches.free[0].to_string(),
@@ -90,5 +93,6 @@ pub(super) fn parse_opts() -> Options {
         key: key,
         capacity: cap,
         numeric: num,
+        reverse: rev,
     }
 }
