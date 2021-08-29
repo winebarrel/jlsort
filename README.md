@@ -2,6 +2,12 @@
 
 Sort [ndjson](http://ndjson.org/)/[JSON Lines](https://jsonlines.org/) using [External merge sort](https://en.wikipedia.org/wiki/External_sorting#External_merge_sort).
 
+## Installation
+
+```
+brew install winebarrel/jl/jlsort
+```
+
 ## Usage
 
 ```
