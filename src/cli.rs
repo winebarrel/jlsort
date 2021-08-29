@@ -81,6 +81,7 @@ pub(super) fn parse_opts() -> Options {
     let rev = matches.opt_present("r");
 
     let file = match matches.free.len() {
+        0 => "-".to_string(),
         1 => matches.free[0].to_string(),
         _ => {
             print_usage(&program, opts);

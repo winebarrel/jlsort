@@ -67,6 +67,7 @@ dependencies = [
  "once_cell",
  "regex",
  "serde_json",
+ "tempfile",
 ]
 
 [[package]]

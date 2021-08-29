@@ -5,7 +5,7 @@ Sort [ndjson](http://ndjson.org/)/[JSON Lines](https://jsonlines.org/) using [Ex
 ## Usage
 
 ```
-Usage: jlsort [OPTIONS] FILE
+Usage: jlsort [OPTIONS] [FILE]
 
 Options:
     -k, --key KEY       JSON key to sort
