@@ -94,3 +94,4 @@ Time:2:42.51, Memory:7729932 KB
 
 * https://github.com/winebarrel/ex_merge_sort_by_key
 * https://github.com/winebarrel/jljoin
+* https://github.com/winebarrel/jluniq
